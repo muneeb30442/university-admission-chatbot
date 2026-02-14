@@ -6,3 +6,4 @@ Project Development Timeline
 [2026-01-16] Created rule-based keyword matcher module
 [2026-01-22] Implemented intent classifier with scikit-learn
 [2026-02-02] Added NLP similarity matcher using TF-IDF
+[2026-02-14] Built web interface and chat UI
