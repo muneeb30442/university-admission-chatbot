@@ -8,3 +8,4 @@ Project Development Timeline
 [2026-02-02] Added NLP similarity matcher using TF-IDF
 [2026-02-14] Built web interface and chat UI
 [2026-02-17] Integrated out-of-context detector
+[2026-02-27] Created ensemble method combining all three approaches
