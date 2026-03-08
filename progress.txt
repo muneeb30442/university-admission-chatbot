@@ -9,3 +9,4 @@ Project Development Timeline
 [2026-02-14] Built web interface and chat UI
 [2026-02-17] Integrated out-of-context detector
 [2026-02-27] Created ensemble method combining all three approaches
+[2026-03-08] Added test suite with 40 curated queries
