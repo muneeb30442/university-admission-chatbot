@@ -1,0 +1,184 @@
+{
+  "intents": [
+    {
+      "intent": "application_deadline",
+      "patterns": [
+        "When is the application deadline?",
+        "What is the deadline for applying?",
+        "By when do I need to apply?",
+        "Application submission deadline",
+        "When should I submit my application?"
+      ],
+      "responses": ["knowledge_base.admission_info.application_deadline"],
+      "keywords": ["deadline", "apply", "submission", "when"]
+    },
+    {
+      "intent": "eligibility_requirements",
+      "patterns": [
+        "What are the eligibility requirements?",
+        "Am I eligible to apply?",
+        "What is required to apply?",
+        "Admission eligibility criteria"
+      ],
+      "responses": ["knowledge_base.admission_info.eligibility"],
+      "keywords": ["eligible", "requirements", "criteria", "qualifications"]
+    },
+    {
+      "intent": "required_documents",
+      "patterns": [
+        "What documents do I need to submit?",
+        "What are the required documents?",
+        "What should I include in my application?",
+        "Application requirements"
+      ],
+      "responses": ["knowledge_base.admission_info.required_documents"],
+      "keywords": ["documents", "transcript", "score", "letter", "essay"]
+    },
+    {
+      "intent": "application_fee",
+      "patterns": [
+        "What is the application fee?",
+        "How much does it cost to apply?",
+        "Is there a fee?",
+        "Fee waiver information"
+      ],
+      "responses": ["knowledge_base.admission_info.application_fee"],
+      "keywords": ["fee", "cost", "price", "waiver"]
+    },
+    {
+      "intent": "program_duration",
+      "patterns": [
+        "How long is the program?",
+        "What is the duration of the degree?",
+        "How many years to complete?",
+        "Program length"
+      ],
+      "responses": ["knowledge_base.admission_info.program_duration"],
+      "keywords": ["duration", "years", "long", "length"]
+    },
+    {
+      "intent": "tuition_costs",
+      "patterns": [
+        "What is the tuition cost?",
+        "How much does tuition cost?",
+        "What are the fees?",
+        "Cost of attendance"
+      ],
+      "responses": ["knowledge_base.admission_info.tuition_fees"],
+      "keywords": ["tuition", "cost", "fees", "price", "expense"]
+    },
+    {
+      "intent": "financial_aid",
+      "patterns": [
+        "What financial aid options are available?",
+        "Do you offer scholarships?",
+        "What about financial aid?",
+        "Scholarship opportunities"
+      ],
+      "responses": ["knowledge_base.admission_info.financial_aid"],
+      "keywords": ["aid", "scholarship", "loan", "grant", "financial"]
+    },
+    {
+      "intent": "campus_facilities",
+      "patterns": [
+        "What facilities does the campus have?",
+        "Tell me about campus life",
+        "What is campus like?",
+        "Campus amenities"
+      ],
+      "responses": ["knowledge_base.admission_info.campus_life"],
+      "keywords": ["campus", "facilities", "life", "housing", "activities"]
+    },
+    {
+      "intent": "course_programs",
+      "patterns": [
+        "What majors do you offer?",
+        "What programs are available?",
+        "What can I study?",
+        "Available programs"
+      ],
+      "responses": ["knowledge_base.admission_info.course_offerings"],
+      "keywords": ["major", "program", "course", "study", "subject"]
+    },
+    {
+      "intent": "admission_timeline",
+      "patterns": [
+        "How long does it take to get a decision?",
+        "When will I hear back?",
+        "Timeline for decisions",
+        "Decision notification"
+      ],
+      "responses": ["knowledge_base.admission_info.admission_status"],
+      "keywords": ["decision", "timeline", "notification", "hear back", "when"]
+    },
+    {
+      "intent": "transfer_admission",
+      "patterns": [
+        "Can I transfer to your university?",
+        "What are transfer requirements?",
+        "Transfer student admission",
+        "How to transfer?"
+      ],
+      "responses": ["knowledge_base.admission_info.transfer_students"],
+      "keywords": ["transfer", "credits", "GPA"]
+    },
+    {
+      "intent": "international_students",
+      "patterns": [
+        "Can international students apply?",
+        "What if I am from another country?",
+        "International student requirements",
+        "Visa sponsorship"
+      ],
+      "responses": ["knowledge_base.admission_info.international_students"],
+      "keywords": ["international", "visa", "passport", "TOEFL", "IELTS"]
+    },
+    {
+      "intent": "contact_info",
+      "patterns": [
+        "How can I contact you?",
+        "What is your contact information?",
+        "Phone number for admissions",
+        "Email address"
+      ],
+      "responses": ["knowledge_base.contact_info"],
+      "keywords": ["contact", "phone", "email", "address"]
+    },
+    {
+      "intent": "application_status",
+      "patterns": [
+        "What is my application status?",
+        "When will I hear about my application?",
+        "Can I check my status?",
+        "Application tracking"
+      ],
+      "responses": ["I can't check your application status directly. Please contact admissions@university.edu or call +1-800-UNIVERSITY with your application ID."],
+      "keywords": ["status", "check", "tracking"]
+    },
+    {
+      "intent": "greeting",
+      "patterns": [
+        "Hello",
+        "Hi",
+        "Hey",
+        "Greetings",
+        "Good morning",
+        "Good afternoon"
+      ],
+      "responses": ["Hello! Welcome to our university admissions chatbot. How can I help you today?"],
+      "keywords": ["hi", "hello", "hey"]
+    },
+    {
+      "intent": "goodbye",
+      "patterns": [
+        "Goodbye",
+        "Bye",
+        "See you later",
+        "Take care",
+        "Farewell"
+      ],
+      "responses": ["Thank you for your interest! If you have more questions, feel free to ask. Good luck with your application!"],
+      "keywords": ["goodbye", "bye", "farewell"]
+    }
+  ]
+}

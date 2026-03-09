@@ -1,0 +1,29 @@
+{
+  "admission_info": {
+    "application_deadline": "The regular admission deadline is March 15th each year. Early decision deadline is November 1st.",
+    "eligibility": "Applicants must have a minimum GPA of 3.0 and an SAT score of 1000 or ACT score of 21.",
+    "required_documents": "We require official transcripts, SAT/ACT scores, two letters of recommendation, and a personal essay.",
+    "application_fee": "The application fee is $50 USD. Fee waivers are available for qualified low-income applicants.",
+    "program_duration": "Undergraduate programs typically take 4 years to complete. Some specialized programs may take 5 years.",
+    "tuition_fees": "Annual tuition is $45,000 for in-state students and $55,000 for out-of-state students.",
+    "financial_aid": "We offer need-based aid, merit scholarships, federal loans, and work-study opportunities.",
+    "campus_life": "Our campus features modern facilities, student clubs, sports programs, and residential housing.",
+    "course_offerings": "We offer over 100 undergraduate majors and minors across engineering, liberal arts, business, and sciences.",
+    "admission_status": "Applications are reviewed on a rolling basis. Decisions are typically sent within 4-6 weeks of receiving a complete application.",
+    "transfer_students": "Transfer students must have a minimum GPA of 2.5 and can transfer up to 60 credit hours.",
+    "international_students": "International students need a valid passport, visa sponsorship, English language proficiency test (TOEFL/IELTS), and proof of financial support."
+  },
+  "contact_info": {
+    "phone": "+1-800-UNIVERSITY",
+    "email": "admissions@university.edu",
+    "office_hours": "Monday to Friday, 9:00 AM to 5:00 PM EST",
+    "website": "www.university.edu/admissions"
+  },
+  "faqs": {
+    "when_apply": "You can apply anytime from September to March for fall admission or January to August for spring admission.",
+    "how_long_decision": "Most decisions take 4-6 weeks for regular review. Early decision applications are processed within 2-3 weeks.",
+    "appeal_decision": "You can appeal an admission decision by submitting additional information or achievements.",
+    "deferment": "If deferred, you can submit updates showing how your academic performance or achievements have improved.",
+    "housing": "On-campus housing is guaranteed for first-year students. Housing selection for other years is based on seniority."
+  }
+}

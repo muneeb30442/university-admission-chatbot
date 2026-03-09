@@ -1,0 +1,256 @@
+{
+  "test_queries": [
+    {
+      "id": 1,
+      "query": "What is the application deadline?",
+      "expected_intent": "application_deadline",
+      "category": "application_process"
+    },
+    {
+      "id": 2,
+      "query": "When should I submit my application?",
+      "expected_intent": "application_deadline",
+      "category": "application_process"
+    },
+    {
+      "id": 3,
+      "query": "What are the eligibility requirements?",
+      "expected_intent": "eligibility_requirements",
+      "category": "requirements"
+    },
+    {
+      "id": 4,
+      "query": "Am I eligible to apply if I have a 2.8 GPA?",
+      "expected_intent": "eligibility_requirements",
+      "category": "requirements"
+    },
+    {
+      "id": 5,
+      "query": "What documents do I need to submit?",
+      "expected_intent": "required_documents",
+      "category": "application_process"
+    },
+    {
+      "id": 6,
+      "query": "Do you need my SAT scores in the application?",
+      "expected_intent": "required_documents",
+      "category": "application_process"
+    },
+    {
+      "id": 7,
+      "query": "What is the application fee?",
+      "expected_intent": "application_fee",
+      "category": "costs"
+    },
+    {
+      "id": 8,
+      "query": "How much does it cost to apply?",
+      "expected_intent": "application_fee",
+      "category": "costs"
+    },
+    {
+      "id": 9,
+      "query": "Is there a fee waiver for low-income students?",
+      "expected_intent": "application_fee",
+      "category": "costs"
+    },
+    {
+      "id": 10,
+      "query": "How long does the program take?",
+      "expected_intent": "program_duration",
+      "category": "program_info"
+    },
+    {
+      "id": 11,
+      "query": "What is the duration of the degree?",
+      "expected_intent": "program_duration",
+      "category": "program_info"
+    },
+    {
+      "id": 12,
+      "query": "How many years to complete the program?",
+      "expected_intent": "program_duration",
+      "category": "program_info"
+    },
+    {
+      "id": 13,
+      "query": "What is the tuition cost?",
+      "expected_intent": "tuition_costs",
+      "category": "costs"
+    },
+    {
+      "id": 14,
+      "query": "How much does tuition cost per year?",
+      "expected_intent": "tuition_costs",
+      "category": "costs"
+    },
+    {
+      "id": 15,
+      "query": "What financial aid options are available?",
+      "expected_intent": "financial_aid",
+      "category": "financial"
+    },
+    {
+      "id": 16,
+      "query": "Do you offer scholarships?",
+      "expected_intent": "financial_aid",
+      "category": "financial"
+    },
+    {
+      "id": 17,
+      "query": "Can I get a loan to pay for college?",
+      "expected_intent": "financial_aid",
+      "category": "financial"
+    },
+    {
+      "id": 18,
+      "query": "What facilities does the campus have?",
+      "expected_intent": "campus_facilities",
+      "category": "campus_life"
+    },
+    {
+      "id": 19,
+      "query": "Tell me about campus life",
+      "expected_intent": "campus_facilities",
+      "category": "campus_life"
+    },
+    {
+      "id": 20,
+      "query": "What majors do you offer?",
+      "expected_intent": "course_programs",
+      "category": "academic"
+    },
+    {
+      "id": 21,
+      "query": "What programs are available?",
+      "expected_intent": "course_programs",
+      "category": "academic"
+    },
+    {
+      "id": 22,
+      "query": "What can I study at your university?",
+      "expected_intent": "course_programs",
+      "category": "academic"
+    },
+    {
+      "id": 23,
+      "query": "How long does it take to get a decision?",
+      "expected_intent": "admission_timeline",
+      "category": "application_process"
+    },
+    {
+      "id": 24,
+      "query": "When will I hear back about my application?",
+      "expected_intent": "admission_timeline",
+      "category": "application_process"
+    },
+    {
+      "id": 25,
+      "query": "Can I transfer to your university?",
+      "expected_intent": "transfer_admission",
+      "category": "special_cases"
+    },
+    {
+      "id": 26,
+      "query": "What are transfer requirements?",
+      "expected_intent": "transfer_admission",
+      "category": "special_cases"
+    },
+    {
+      "id": 27,
+      "query": "Can international students apply?",
+      "expected_intent": "international_students",
+      "category": "special_cases"
+    },
+    {
+      "id": 28,
+      "query": "Do you accept students from abroad?",
+      "expected_intent": "international_students",
+      "category": "special_cases"
+    },
+    {
+      "id": 29,
+      "query": "How can I contact you?",
+      "expected_intent": "contact_info",
+      "category": "support"
+    },
+    {
+      "id": 30,
+      "query": "What is your phone number?",
+      "expected_intent": "contact_info",
+      "category": "support"
+    },
+    {
+      "id": 31,
+      "query": "Hello",
+      "expected_intent": "greeting",
+      "category": "greeting"
+    },
+    {
+      "id": 32,
+      "query": "Hi there!",
+      "expected_intent": "greeting",
+      "category": "greeting"
+    },
+    {
+      "id": 33,
+      "query": "Goodbye",
+      "expected_intent": "goodbye",
+      "category": "greeting"
+    },
+    {
+      "id": 34,
+      "query": "What SAT score do I need?",
+      "expected_intent": "eligibility_requirements",
+      "category": "requirements"
+    },
+    {
+      "id": 35,
+      "query": "Is there housing available on campus?",
+      "expected_intent": "campus_facilities",
+      "category": "campus_life"
+    },
+    {
+      "id": 36,
+      "query": "Can I appeal my admission decision?",
+      "expected_intent": "application_status",
+      "category": "application_process"
+    },
+    {
+      "id": 37,
+      "query": "What if I get deferred?",
+      "expected_intent": "application_status",
+      "category": "application_process"
+    },
+    {
+      "id": 38,
+      "query": "Tell me about TOEFL requirements for international students",
+      "expected_intent": "international_students",
+      "category": "special_cases"
+    },
+    {
+      "id": 39,
+      "query": "What is the minimum GPA required?",
+      "expected_intent": "eligibility_requirements",
+      "category": "requirements"
+    },
+    {
+      "id": 40,
+      "query": "Do you have work-study opportunities?",
+      "expected_intent": "financial_aid",
+      "category": "financial"
+    }
+  ],
+  "categories": [
+    "application_process",
+    "requirements",
+    "costs",
+    "program_info",
+    "financial",
+    "campus_life",
+    "academic",
+    "special_cases",
+    "support",
+    "greeting"
+  ]
+}
