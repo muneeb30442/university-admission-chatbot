@@ -11,3 +11,4 @@ Project Development Timeline
 [2026-02-27] Created ensemble method combining all three approaches
 [2026-03-08] Added test suite with 40 curated queries
 [2026-03-18] Improved intents.json and knowledge base
+[2026-03-21] Fixed IELTS and international students intent
