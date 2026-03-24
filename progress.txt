@@ -28,3 +28,4 @@ Period: 2026-01-01 to 2026-05-04
 [2026-03-13 00:00:00] Created test suite with 40 curated queries
 [2026-03-20 00:00:00] Added category-wise test analysis
 [2026-03-20 00:00:00] Improved intents.json with IELTS patterns
+[2026-03-24 00:00:00] Fixed international students intent
