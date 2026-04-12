@@ -13,3 +13,4 @@ Project Development Timeline
 [2026-03-18] Improved intents.json and knowledge base
 [2026-03-21] Fixed IELTS and international students intent
 [2026-03-31] Added logging and interaction storage system
+[2026-04-12] Optimized confidence scoring and response times
