@@ -4,253 +4,350 @@
       "id": 1,
       "query": "What is the application deadline?",
       "expected_intent": "application_deadline",
-      "category": "application_process"
+      "category": "application_process",
+      "difficulty": "simple",
+      "description": "Basic direct question about deadline"
     },
     {
       "id": 2,
-      "query": "When should I submit my application?",
+      "query": "By when do I need to apply?",
       "expected_intent": "application_deadline",
-      "category": "application_process"
+      "category": "application_process",
+      "difficulty": "simple",
+      "description": "Paraphrased deadline question"
     },
     {
       "id": 3,
-      "query": "What are the eligibility requirements?",
-      "expected_intent": "eligibility_requirements",
-      "category": "requirements"
+      "query": "I need to know the submission deadline - can you help?",
+      "expected_intent": "application_deadline",
+      "category": "application_process",
+      "difficulty": "moderate",
+      "description": "Conversational deadline question"
     },
     {
       "id": 4,
-      "query": "Am I eligible to apply if I have a 2.8 GPA?",
+      "query": "What are the eligibility requirements?",
       "expected_intent": "eligibility_requirements",
-      "category": "requirements"
+      "category": "admission_requirements",
+      "difficulty": "simple",
+      "description": "Direct question about requirements"
     },
     {
       "id": 5,
-      "query": "What documents do I need to submit?",
-      "expected_intent": "required_documents",
-      "category": "application_process"
+      "query": "Am I eligible to apply if I have a 3.2 GPA?",
+      "expected_intent": "eligibility_requirements",
+      "category": "admission_requirements",
+      "difficulty": "moderate",
+      "description": "Specific eligibility question with GPA"
     },
     {
       "id": 6,
-      "query": "Do you need my SAT scores in the application?",
-      "expected_intent": "required_documents",
-      "category": "application_process"
+      "query": "What's the minimum GPA and SAT score needed to get in?",
+      "expected_intent": "eligibility_requirements",
+      "category": "admission_requirements",
+      "difficulty": "moderate",
+      "description": "Multi-part eligibility question"
     },
     {
       "id": 7,
-      "query": "What is the application fee?",
-      "expected_intent": "application_fee",
-      "category": "costs"
+      "query": "Can I apply if I don't have perfect test scores?",
+      "expected_intent": "eligibility_requirements",
+      "category": "admission_requirements",
+      "difficulty": "complex",
+      "description": "Conditional/hypothetical eligibility question"
     },
     {
       "id": 8,
-      "query": "How much does it cost to apply?",
-      "expected_intent": "application_fee",
-      "category": "costs"
+      "query": "What documents do I need to submit?",
+      "expected_intent": "required_documents",
+      "category": "application_process",
+      "difficulty": "simple",
+      "description": "Basic question about documents"
     },
     {
       "id": 9,
-      "query": "Is there a fee waiver for low-income students?",
-      "expected_intent": "application_fee",
-      "category": "costs"
+      "query": "Which files and certificates should I include in my application?",
+      "expected_intent": "required_documents",
+      "category": "application_process",
+      "difficulty": "moderate",
+      "description": "Paraphrased documents question"
     },
     {
       "id": 10,
-      "query": "How long does the program take?",
-      "expected_intent": "program_duration",
-      "category": "program_info"
+      "query": "Is a recommendation letter required?",
+      "expected_intent": "required_documents",
+      "category": "application_process",
+      "difficulty": "simple",
+      "description": "Specific document type question"
     },
     {
       "id": 11,
-      "query": "What is the duration of the degree?",
-      "expected_intent": "program_duration",
-      "category": "program_info"
+      "query": "What is the application fee?",
+      "expected_intent": "application_fee",
+      "category": "tuition_financial_aid",
+      "difficulty": "simple",
+      "description": "Direct fee question"
     },
     {
       "id": 12,
-      "query": "How many years to complete the program?",
-      "expected_intent": "program_duration",
-      "category": "program_info"
+      "query": "Do you charge for applications? How much?",
+      "expected_intent": "application_fee",
+      "category": "tuition_financial_aid",
+      "difficulty": "simple",
+      "description": "Multi-part fee question"
     },
     {
       "id": 13,
-      "query": "What is the tuition cost?",
-      "expected_intent": "tuition_costs",
-      "category": "costs"
+      "query": "Are there fee waivers available for underprivileged students?",
+      "expected_intent": "application_fee",
+      "category": "tuition_financial_aid",
+      "difficulty": "moderate",
+      "description": "Fee waiver eligibility question"
     },
     {
       "id": 14,
-      "query": "How much does tuition cost per year?",
+      "query": "What is the tuition cost per semester?",
       "expected_intent": "tuition_costs",
-      "category": "costs"
+      "category": "tuition_financial_aid",
+      "difficulty": "simple",
+      "description": "Direct tuition question"
     },
     {
       "id": 15,
-      "query": "What financial aid options are available?",
-      "expected_intent": "financial_aid",
-      "category": "financial"
+      "query": "How much will my degree cost in total?",
+      "expected_intent": "tuition_costs",
+      "category": "tuition_financial_aid",
+      "difficulty": "moderate",
+      "description": "Total cost calculation question"
     },
     {
       "id": 16,
-      "query": "Do you offer scholarships?",
+      "query": "What financial aid options are available?",
       "expected_intent": "financial_aid",
-      "category": "financial"
+      "category": "tuition_financial_aid",
+      "difficulty": "simple",
+      "description": "General financial aid question"
     },
     {
       "id": 17,
-      "query": "Can I get a loan to pay for college?",
+      "query": "Do you have scholarships or grants for merit students?",
       "expected_intent": "financial_aid",
-      "category": "financial"
+      "category": "tuition_financial_aid",
+      "difficulty": "moderate",
+      "description": "Specific aid type question"
     },
     {
       "id": 18,
-      "query": "What facilities does the campus have?",
-      "expected_intent": "campus_facilities",
-      "category": "campus_life"
+      "query": "Can I get financial assistance if my family has low income?",
+      "expected_intent": "financial_aid",
+      "category": "tuition_financial_aid",
+      "difficulty": "moderate",
+      "description": "Need-based aid question"
     },
     {
       "id": 19,
-      "query": "Tell me about campus life",
-      "expected_intent": "campus_facilities",
-      "category": "campus_life"
+      "query": "What majors and programs do you offer?",
+      "expected_intent": "course_programs",
+      "category": "programs_courses",
+      "difficulty": "simple",
+      "description": "Basic programs question"
     },
     {
       "id": 20,
-      "query": "What majors do you offer?",
+      "query": "Can I study engineering or computer science?",
       "expected_intent": "course_programs",
-      "category": "academic"
+      "category": "programs_courses",
+      "difficulty": "simple",
+      "description": "Specific program inquiry"
     },
     {
       "id": 21,
-      "query": "What programs are available?",
+      "query": "What specializations are available within your business program?",
       "expected_intent": "course_programs",
-      "category": "academic"
+      "category": "programs_courses",
+      "difficulty": "moderate",
+      "description": "Program specialization question"
     },
     {
       "id": 22,
-      "query": "What can I study at your university?",
-      "expected_intent": "course_programs",
-      "category": "academic"
+      "query": "How long does it take to complete a degree program?",
+      "expected_intent": "program_duration",
+      "category": "programs_courses",
+      "difficulty": "simple",
+      "description": "Program duration question"
     },
     {
       "id": 23,
-      "query": "How long does it take to get a decision?",
-      "expected_intent": "admission_timeline",
-      "category": "application_process"
+      "query": "Is your program a 3-year or 4-year program?",
+      "expected_intent": "program_duration",
+      "category": "programs_courses",
+      "difficulty": "simple",
+      "description": "Specific duration question"
     },
     {
       "id": 24,
-      "query": "When will I hear back about my application?",
-      "expected_intent": "admission_timeline",
-      "category": "application_process"
+      "query": "What is the campus like? Tell me about student life.",
+      "expected_intent": "campus_facilities",
+      "category": "campus_life_facilities",
+      "difficulty": "moderate",
+      "description": "General campus information"
     },
     {
       "id": 25,
-      "query": "Can I transfer to your university?",
-      "expected_intent": "transfer_admission",
-      "category": "special_cases"
+      "query": "Do you have on-campus housing and dining facilities?",
+      "expected_intent": "campus_facilities",
+      "category": "campus_life_facilities",
+      "difficulty": "simple",
+      "description": "Specific facility question"
     },
     {
       "id": 26,
-      "query": "What are transfer requirements?",
-      "expected_intent": "transfer_admission",
-      "category": "special_cases"
+      "query": "What clubs and student organizations are available?",
+      "expected_intent": "campus_facilities",
+      "category": "campus_life_facilities",
+      "difficulty": "moderate",
+      "description": "Student activity question"
     },
     {
       "id": 27,
-      "query": "Can international students apply?",
-      "expected_intent": "international_students",
-      "category": "special_cases"
+      "query": "How long does it take to hear back from admissions?",
+      "expected_intent": "admission_timeline",
+      "category": "application_process",
+      "difficulty": "simple",
+      "description": "Decision timeline question"
     },
     {
       "id": 28,
-      "query": "Do you accept students from abroad?",
-      "expected_intent": "international_students",
-      "category": "special_cases"
+      "query": "When should I expect to receive my admission decision?",
+      "expected_intent": "admission_timeline",
+      "category": "application_process",
+      "difficulty": "moderate",
+      "description": "Paraphrased timeline question"
     },
     {
       "id": 29,
-      "query": "How can I contact you?",
-      "expected_intent": "contact_info",
-      "category": "support"
+      "query": "Can I transfer from another university to yours?",
+      "expected_intent": "transfer_admission",
+      "category": "special_cases",
+      "difficulty": "simple",
+      "description": "Transfer eligibility question"
     },
     {
       "id": 30,
-      "query": "What is your phone number?",
-      "expected_intent": "contact_info",
-      "category": "support"
+      "query": "What are the requirements for transferring as an international student?",
+      "expected_intent": "transfer_admission",
+      "category": "special_cases",
+      "difficulty": "complex",
+      "description": "Complex transfer question with multiple criteria"
     },
     {
       "id": 31,
-      "query": "Hello",
-      "expected_intent": "greeting",
-      "category": "greeting"
+      "query": "Can international students apply?",
+      "expected_intent": "international_students",
+      "category": "special_cases",
+      "difficulty": "simple",
+      "description": "International eligibility question"
     },
     {
       "id": 32,
-      "query": "Hi there!",
-      "expected_intent": "greeting",
-      "category": "greeting"
+      "query": "What English proficiency test scores do you require for international applicants?",
+      "expected_intent": "international_students",
+      "category": "special_cases",
+      "difficulty": "moderate",
+      "description": "International student requirements"
     },
     {
       "id": 33,
-      "query": "Goodbye",
-      "expected_intent": "goodbye",
-      "category": "greeting"
+      "query": "How can I contact the admissions office?",
+      "expected_intent": "contact_info",
+      "category": "support",
+      "difficulty": "simple",
+      "description": "Contact information request"
     },
     {
       "id": 34,
-      "query": "What SAT score do I need?",
-      "expected_intent": "eligibility_requirements",
-      "category": "requirements"
+      "query": "What is the phone number and email for admissions?",
+      "expected_intent": "contact_info",
+      "category": "support",
+      "difficulty": "simple",
+      "description": "Specific contact details"
     },
     {
       "id": 35,
-      "query": "Is there housing available on campus?",
-      "expected_intent": "campus_facilities",
-      "category": "campus_life"
+      "query": "Hello!",
+      "expected_intent": "greeting",
+      "category": "greeting",
+      "difficulty": "simple",
+      "description": "Simple greeting"
     },
     {
       "id": 36,
-      "query": "Can I appeal my admission decision?",
-      "expected_intent": "application_status",
-      "category": "application_process"
+      "query": "Hi, I have some questions about your university",
+      "expected_intent": "greeting",
+      "category": "greeting",
+      "difficulty": "simple",
+      "description": "Greeting with intent"
     },
     {
       "id": 37,
-      "query": "What if I get deferred?",
-      "expected_intent": "application_status",
-      "category": "application_process"
+      "query": "Good morning! Can you help me with admission information?",
+      "expected_intent": "greeting",
+      "category": "greeting",
+      "difficulty": "simple",
+      "description": "Formal greeting"
     },
     {
       "id": 38,
-      "query": "Tell me about TOEFL requirements for international students",
-      "expected_intent": "international_students",
-      "category": "special_cases"
+      "query": "Thanks for your help, goodbye!",
+      "expected_intent": "goodbye",
+      "category": "greeting",
+      "difficulty": "simple",
+      "description": "Farewell with gratitude"
     },
     {
       "id": 39,
-      "query": "What is the minimum GPA required?",
-      "expected_intent": "eligibility_requirements",
-      "category": "requirements"
+      "query": "I'm confused about the application process, can you explain it step by step?",
+      "expected_intent": "application_process",
+      "category": "application_process",
+      "difficulty": "complex",
+      "description": "Detailed process explanation request"
     },
     {
       "id": 40,
-      "query": "Do you have work-study opportunities?",
+      "query": "Do you have any information about scholarships for minorities or women?",
       "expected_intent": "financial_aid",
-      "category": "financial"
+      "category": "tuition_financial_aid",
+      "difficulty": "complex",
+      "description": "Specific demographic scholarship inquiry"
     }
   ],
   "categories": [
     "application_process",
-    "requirements",
-    "costs",
-    "program_info",
-    "financial",
-    "campus_life",
-    "academic",
+    "admission_requirements",
+    "tuition_financial_aid",
+    "programs_courses",
+    "campus_life_facilities",
     "special_cases",
     "support",
     "greeting"
-  ]
+  ],
+  "test_summary": {
+    "total_questions": 40,
+    "difficulty_breakdown": {
+      "simple": 17,
+      "moderate": 17,
+      "complex": 6
+    },
+    "category_breakdown": {
+      "application_process": 9,
+      "admission_requirements": 4,
+      "tuition_financial_aid": 8,
+      "programs_courses": 5,
+      "campus_life_facilities": 3,
+      "special_cases": 4,
+      "support": 2,
+      "greeting": 4
+    },
+    "description": "Comprehensive test suite covering all categories with varying difficulty levels for thorough chatbot evaluation"
+  }
 }

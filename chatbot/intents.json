@@ -7,10 +7,15 @@
         "What is the deadline for applying?",
         "By when do I need to apply?",
         "Application submission deadline",
-        "When should I submit my application?"
+        "When should I submit my application?",
+        "What is the last date to apply?",
+        "When does application close?",
+        "Until when can I apply?",
+        "What is the final submission date?",
+        "When is the cutoff date for applications?"
       ],
       "responses": ["knowledge_base.admission_info.application_deadline"],
-      "keywords": ["deadline", "apply", "submission", "when"]
+      "keywords": ["deadline", "apply", "submission", "when", "last date", "close", "final", "cutoff", "due date"]
     },
     {
       "intent": "eligibility_requirements",
@@ -18,10 +23,21 @@
         "What are the eligibility requirements?",
         "Am I eligible to apply?",
         "What is required to apply?",
-        "Admission eligibility criteria"
+        "Admission eligibility criteria",
+        "What GPA do I need?",
+        "Minimum GPA requirement",
+        "What are the academic requirements?",
+        "Do I meet the requirements?",
+        "What are the admission criteria?",
+        "Admission criteria for undergraduate programs",
+        "What criteria do you use for admission?",
+        "What are the selection criteria?",
+        "How do you evaluate applicants?",
+        "What qualifications do I need?",
+        "What are the minimum requirements?"
       ],
       "responses": ["knowledge_base.admission_info.eligibility"],
-      "keywords": ["eligible", "requirements", "criteria", "qualifications"]
+      "keywords": ["eligible", "requirements", "criteria", "qualifications", "GPA", "academic", "minimum", "SAT", "ACT", "score", "evaluate", "selection", "qualify"]
     },
     {
       "intent": "required_documents",
@@ -29,10 +45,20 @@
         "What documents do I need to submit?",
         "What are the required documents?",
         "What should I include in my application?",
-        "Application requirements"
+        "Application requirements",
+        "What documents do I need?",
+        "Required documents for admission",
+        "What should I submit?",
+        "Application documents list",
+        "Do I need recommendation letters?",
+        "Do I need transcripts?",
+        "What papers are needed?",
+        "What files should I upload?",
+        "Is an essay required?",
+        "Do I need a personal statement?"
       ],
       "responses": ["knowledge_base.admission_info.required_documents"],
-      "keywords": ["documents", "transcript", "score", "letter", "essay"]
+      "keywords": ["documents", "transcript", "score", "letter", "essay", "certificate", "recommendation", "paper", "upload", "personal statement", "CV", "resume"]
     },
     {
       "intent": "application_fee",
@@ -40,10 +66,16 @@
         "What is the application fee?",
         "How much does it cost to apply?",
         "Is there a fee?",
-        "Fee waiver information"
+        "Fee waiver information",
+        "Can I get a fee waiver?",
+        "Application cost",
+        "Do I have to pay to apply?",
+        "Is the application free?",
+        "How much is the application charge?",
+        "Can I waive the application fee?"
       ],
       "responses": ["knowledge_base.admission_info.application_fee"],
-      "keywords": ["fee", "cost", "price", "waiver"]
+      "keywords": ["fee", "cost", "price", "waiver", "charge", "payment", "free", "waive", "amount"]
     },
     {
       "intent": "program_duration",
@@ -51,10 +83,15 @@
         "How long is the program?",
         "What is the duration of the degree?",
         "How many years to complete?",
-        "Program length"
+        "Program length",
+        "How many years is the degree?",
+        "How long will it take to graduate?",
+        "Duration of the course",
+        "How many semesters?",
+        "When will I finish my degree?"
       ],
       "responses": ["knowledge_base.admission_info.program_duration"],
-      "keywords": ["duration", "years", "long", "length"]
+      "keywords": ["duration", "years", "long", "length", "complete", "semester", "graduate", "finish", "take"]
     },
     {
       "intent": "tuition_costs",
@@ -62,10 +99,16 @@
         "What is the tuition cost?",
         "How much does tuition cost?",
         "What are the fees?",
-        "Cost of attendance"
+        "Cost of attendance",
+        "How much per semester?",
+        "Annual tuition fee",
+        "What is the total cost?",
+        "How much for the whole degree?",
+        "Tuition fees per year",
+        "What are the estimated expenses?"
       ],
       "responses": ["knowledge_base.admission_info.tuition_fees"],
-      "keywords": ["tuition", "cost", "fees", "price", "expense"]
+      "keywords": ["tuition", "cost", "fees", "price", "expense", "semester", "annual", "total", "attendance", "estimate"]
     },
     {
       "intent": "financial_aid",
@@ -73,10 +116,18 @@
         "What financial aid options are available?",
         "Do you offer scholarships?",
         "What about financial aid?",
-        "Scholarship opportunities"
+        "Scholarship opportunities",
+        "How can I get financial help?",
+        "Are there grants available?",
+        "Does the university offer financial assistance?",
+        "Can I get a scholarship?",
+        "What types of aid exist?",
+        "How to apply for financial aid?",
+        "Are there merit-based scholarships?",
+        "Need-based financial aid"
       ],
       "responses": ["knowledge_base.admission_info.financial_aid"],
-      "keywords": ["aid", "scholarship", "loan", "grant", "financial"]
+      "keywords": ["aid", "scholarship", "loan", "grant", "financial", "money", "help", "assistance", "merit", "need-based", "funding"]
     },
     {
       "intent": "campus_facilities",
@@ -84,10 +135,17 @@
         "What facilities does the campus have?",
         "Tell me about campus life",
         "What is campus like?",
-        "Campus amenities"
+        "Campus amenities",
+        "Do you have housing?",
+        "Is there on-campus accommodation?",
+        "What activities are available?",
+        "Tell me about student life",
+        "Are there sports facilities?",
+        "Does the campus have a library?",
+        "What is there to do on campus?"
       ],
       "responses": ["knowledge_base.admission_info.campus_life"],
-      "keywords": ["campus", "facilities", "life", "housing", "activities"]
+      "keywords": ["campus", "facilities", "life", "housing", "activities", "hostel", "dorm", "accommodation", "sports", "library", "student life", "amenities"]
     },
     {
       "intent": "course_programs",
@@ -95,10 +153,18 @@
         "What majors do you offer?",
         "What programs are available?",
         "What can I study?",
-        "Available programs"
+        "Available programs",
+        "Do you have computer science?",
+        "What degrees are offered?",
+        "What courses are available?",
+        "List of majors",
+        "Can I study engineering?",
+        "What business programs exist?",
+        "Is there a medical program?",
+        "Do you offer online programs?"
       ],
       "responses": ["knowledge_base.admission_info.course_offerings"],
-      "keywords": ["major", "program", "course", "study", "subject"]
+      "keywords": ["major", "program", "course", "study", "subject", "degree", "computer", "engineering", "business", "medical", "online", "offered"]
     },
     {
       "intent": "admission_timeline",
@@ -106,10 +172,17 @@
         "How long does it take to get a decision?",
         "When will I hear back?",
         "Timeline for decisions",
-        "Decision notification"
+        "Decision notification",
+        "When will I get admission decision?",
+        "How long for application review?",
+        "What is the decision timeline?",
+        "When will you announce decisions?",
+        "How soon will I know?",
+        "When can I expect a response?",
+        "Decision release date"
       ],
       "responses": ["knowledge_base.admission_info.admission_status"],
-      "keywords": ["decision", "timeline", "notification", "hear back", "when"]
+      "keywords": ["decision", "timeline", "notification", "hear back", "when", "review", "announce", "wait", "response", "release"]
     },
     {
       "intent": "transfer_admission",
@@ -117,21 +190,53 @@
         "Can I transfer to your university?",
         "What are transfer requirements?",
         "Transfer student admission",
-        "How to transfer?"
+        "How to transfer?",
+        "Transfer credits policy",
+        "Can I transfer from another college?",
+        "Will my credits transfer?",
+        "Transfer application process",
+        "What is the transfer GPA requirement?"
       ],
       "responses": ["knowledge_base.admission_info.transfer_students"],
-      "keywords": ["transfer", "credits", "GPA"]
+      "keywords": ["transfer", "credits", "GPA", "transferred", "college", "credit transfer", "transfer student"]
     },
     {
       "intent": "international_students",
       "patterns": [
         "Can international students apply?",
-        "What if I am from another country?",
-        "International student requirements",
-        "Visa sponsorship"
+        "Requirements for international students",
+        "I am from another country, can I apply?",
+        "Do you accept foreign students?",
+        "Visa requirements",
+        "Study visa information",
+        "What do international students need?",
+        "How can international students apply?",
+        "International student admission process",
+        "What visa do I need?",
+        "Can I work while studying?",
+        "International application process"
       ],
       "responses": ["knowledge_base.admission_info.international_students"],
-      "keywords": ["international", "visa", "passport", "TOEFL", "IELTS"]
+      "keywords": ["international", "visa", "passport", "foreign", "overseas", "study permit", "immigration", "student visa"]
+    },
+    {
+      "intent": "ielts_requirement",
+      "patterns": [
+        "Do I need IELTS?",
+        "Is IELTS required?",
+        "Do I need to take IELTS?",
+        "Is IELTS mandatory?",
+        "What is the minimum IELTS score?",
+        "What IELTS score do I need?",
+        "Minimum IELTS requirement",
+        "IELTS band requirement",
+        "What is the required IELTS score?",
+        "Do you accept IELTS?",
+        "IELTS score needed for admission",
+        "Is TOEFL accepted instead of IELTS?"
+      ],
+      "responses": ["The minimum IELTS score required is 6.5 overall, with no band less than 6.0. TOEFL iBT minimum is 80."],
+      "keywords": ["IELTS", "TOEFL", "score", "minimum", "band", "required", "mandatory", "need", "accept", "English test"]
     },
     {
       "intent": "contact_info",
@@ -139,10 +244,15 @@
         "How can I contact you?",
         "What is your contact information?",
         "Phone number for admissions",
-        "Email address"
+        "Email address",
+        "Admissions office contact",
+        "How do I reach the admissions office?",
+        "Who can I talk to?",
+        "Admissions phone number",
+        "What is the email for inquiries?"
       ],
       "responses": ["knowledge_base.contact_info"],
-      "keywords": ["contact", "phone", "email", "address"]
+      "keywords": ["contact", "phone", "email", "address", "call", "reach", "talk", "inquiries", "office"]
     },
     {
       "intent": "application_status",
@@ -150,10 +260,13 @@
         "What is my application status?",
         "When will I hear about my application?",
         "Can I check my status?",
-        "Application tracking"
+        "Application tracking",
+        "How to check application status?",
+        "Status of my application",
+        "Where can I see my application decision?"
       ],
       "responses": ["I can't check your application status directly. Please contact admissions@university.edu or call +1-800-UNIVERSITY with your application ID."],
-      "keywords": ["status", "check", "tracking"]
+      "keywords": ["status", "check", "tracking", "update", "application status", "decision status"]
     },
     {
       "intent": "greeting",
@@ -163,10 +276,14 @@
         "Hey",
         "Greetings",
         "Good morning",
-        "Good afternoon"
+        "Good afternoon",
+        "Good evening",
+        "Hi there",
+        "Hello there",
+        "What's up"
       ],
       "responses": ["Hello! Welcome to our university admissions chatbot. How can I help you today?"],
-      "keywords": ["hi", "hello", "hey"]
+      "keywords": ["hi", "hello", "hey", "morning", "afternoon", "evening", "greetings"]
     },
     {
       "intent": "goodbye",
@@ -175,10 +292,23 @@
         "Bye",
         "See you later",
         "Take care",
-        "Farewell"
+        "Farewell",
+        "Thanks bye",
+        "Have a nice day",
+        "See you"
       ],
       "responses": ["Thank you for your interest! If you have more questions, feel free to ask. Good luck with your application!"],
-      "keywords": ["goodbye", "bye", "farewell"]
+      "keywords": ["goodbye", "bye", "farewell", "see you", "take care", "nice day"]
+    },
+    {
+      "intent": "fallback",
+      "patterns": [],
+      "responses": [
+        "I'm not sure I understand. Could you please rephrase your question?",
+        "Sorry, I didn't get that. Can you ask about admissions, deadlines, requirements, or programs?",
+        "I don't have an answer for that. Please ask me about university admissions topics."
+      ],
+      "keywords": []
     }
   ]
 }

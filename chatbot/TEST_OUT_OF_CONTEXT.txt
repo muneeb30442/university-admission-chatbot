@@ -1,0 +1,331 @@
+================================================================================
+                   OUT-OF-CONTEXT DETECTION TESTING GUIDE
+================================================================================
+
+This guide shows you how to test the new out-of-context detection feature.
+
+================================================================================
+WHAT IS OUT-OF-CONTEXT DETECTION?
+================================================================================
+
+When users ask questions unrelated to university admissions, the chatbot now
+automatically detects this and responds with a polite apology message instead
+of trying to answer.
+
+Examples:
+- Query: "Tell me a joke" → Apology message
+- Query: "What's the weather?" → Apology message
+- Query: "What is the application deadline?" → Normal admission answer
+
+================================================================================
+HOW TO TEST
+================================================================================
+
+TEST #1: IN-CONTEXT QUERY (Should Process Normally)
+-------------------------------------------------------
+Query:  "What are the application requirements?"
+Expected Result:
+  ✓ Method: Should be one of 'rule_based', 'intent_classifier', 'nlp_similarity', or 'ensemble'
+  ✓ is_out_of_context: false
+  ✓ Response: Actual admission information
+  ✓ Confidence: > 0.3
+
+Test Status: PASS if all above match, FAIL if any don't match
+
+
+TEST #2: OUT-OF-CONTEXT QUERY (Should Return Apology)
+-------------------------------------------------------
+Query:  "Tell me a joke"
+Expected Result:
+  ✓ Method: 'out_of_context_detection'
+  ✓ is_out_of_context: true
+  ✓ out_of_context_reason: 'out_of_context_keywords'
+  ✓ Response: Apology message about admission topics
+  ✓ Confidence: 1.0
+
+Test Status: PASS if all above match, FAIL if any don't match
+
+
+TEST #3: WEATHER QUERY (Out-of-Context)
+-------------------------------------------------------
+Query:  "What's the weather today?"
+Expected Result:
+  ✓ Method: 'out_of_context_detection'
+  ✓ is_out_of_context: true
+  ✓ out_of_context_reason: 'out_of_context_keywords'
+  ✓ Response: Apology message
+
+Test Status: PASS / FAIL
+
+
+TEST #4: PROGRAMMING QUERY (Out-of-Context)
+-------------------------------------------------------
+Query:  "How do I write Python code?"
+Expected Result:
+  ✓ Method: 'out_of_context_detection'
+  ✓ is_out_of_context: true
+  ✓ Response: Apology message
+
+Test Status: PASS / FAIL
+
+
+TEST #5: PROGRAM INQUIRY (In-Context)
+-------------------------------------------------------
+Query:  "Do you offer a computer science program?"
+Expected Result:
+  ✓ Method: NOT 'out_of_context_detection'
+  ✓ is_out_of_context: false
+  ✓ Response: Information about computer science program
+
+Test Status: PASS / FAIL
+
+
+TEST #6: CAMPUS FACILITIES (In-Context)
+-------------------------------------------------------
+Query:  "What facilities does the campus have?"
+Expected Result:
+  ✓ Method: NOT 'out_of_context_detection'
+  ✓ is_out_of_context: false
+  ✓ Response: Campus facilities information
+
+Test Status: PASS / FAIL
+
+
+TEST #7: TUITION QUESTION (In-Context)
+-------------------------------------------------------
+Query:  "How much is the tuition per year?"
+Expected Result:
+  ✓ Method: NOT 'out_of_context_detection'
+  ✓ is_out_of_context: false
+  ✓ Response: Tuition cost information
+
+Test Status: PASS / FAIL
+
+
+TEST #8: SPORTS QUESTION (Could Go Either Way)
+-------------------------------------------------------
+Query:  "Do you have a football team?"
+Expected Result (In-Context):
+  ✓ Could be treated as campus life question
+  OR be treated as out-of-context
+
+This is a borderline case - test to see how it's classified.
+
+Test Status: Depends on Configuration
+
+
+================================================================================
+QUICK IN-CONTEXT TEST QUERIES
+================================================================================
+
+Try these queries - all should process normally (NOT return apology):
+
+1.  "What is the application deadline?"
+2.  "What GPA do I need to apply?"
+3.  "How much is the application fee?"
+4.  "What documents are required?"
+5.  "Tell me about your engineering program"
+6.  "Is housing available on campus?"
+7.  "Do you offer scholarships?"
+8.  "What is the tuition cost?"
+9.  "How long does the program take?"
+10. "Can international students apply?"
+
+Expected: All return admission information (is_out_of_context = false)
+
+
+================================================================================
+QUICK OUT-OF-CONTEXT TEST QUERIES
+================================================================================
+
+Try these queries - all should return apology message:
+
+1.  "Tell me a joke"
+2.  "What's the weather?"
+3.  "How do I cook pasta?"
+4.  "Recommend a movie"
+5.  "What's the stock market doing?"
+6.  "How do I code in Python?"
+7.  "Tell me a fun fact"
+8.  "What's your favorite band?"
+9.  "Can you help with car repairs?"
+10. "What restaurant should I visit?"
+
+Expected: All return apology message (is_out_of_context = true)
+
+
+================================================================================
+HOW TO READ THE RESPONSE
+================================================================================
+
+Response Format:
+{
+    'user_input': 'original query',
+    'final_response': 'chatbot response',
+    'confidence': 0.0-1.0,
+    'method': 'detection method used',
+    'is_out_of_context': true/false,
+    'out_of_context_reason': 'reason if out-of-context',
+    'timestamp': 'when query was processed'
+}
+
+Key Fields to Check:
+
+1. is_out_of_context (true/false)
+   - TRUE = Query was detected as out-of-context
+   - FALSE = Query is about admissions
+
+2. method (string)
+   - 'out_of_context_detection' = Out-of-context query detected
+   - 'rule_based', 'intent_classifier', 'nlp_similarity', 'ensemble' = Normal processing
+
+3. out_of_context_reason (when is_out_of_context = true)
+   - 'out_of_context_keywords' = More off-topic than admission keywords
+   - 'no_relevant_keywords' = No relevant keywords found
+   - 'low_relevance_score' = Below relevance threshold
+   - None = Not out-of-context (in-context query)
+
+4. confidence (0.0 to 1.0)
+   - 1.0 = Certain (out-of-context detection)
+   - 0.3-0.9 = Normal response confidence
+   - < 0.3 = Uncertain
+
+
+================================================================================
+CHECKING RESPONSE IN FLASK WEB INTERFACE
+================================================================================
+
+1. Open the chatbot web interface: http://localhost:5000
+
+2. Type a test query in the chat box
+
+3. Look for visual indicators:
+   - Response displays the apology message for out-of-context queries
+   - Check the JSON response in browser console for is_out_of_context flag
+   - Method should show 'out_of_context_detection' for out-of-context
+
+
+================================================================================
+CHECKING RESPONSE PROGRAMMATICALLY
+================================================================================
+
+From Python:
+
+    from chatbot import UniversityAdmissionChatbot
+    
+    bot = UniversityAdmissionChatbot()
+    
+    # Test in-context query
+    result = bot.process_query("What is the deadline?")
+    print(f"Is Out-of-Context: {result['is_out_of_context']}")
+    print(f"Method: {result['method']}")
+    print(f"Response: {result['final_response']}")
+    
+    # Test out-of-context query
+    result = bot.process_query("Tell me a joke")
+    print(f"Is Out-of-Context: {result['is_out_of_context']}")
+    print(f"Reason: {result['out_of_context_reason']}")
+
+
+================================================================================
+CONFIGURATION FOR TESTING
+================================================================================
+
+Want to change how the detector works? Edit these files:
+
+1. SENSITIVITY (in modules/out_of_context_detector.py):
+   
+   Line: confidence_threshold: float = 0.3
+   
+   Change 0.3 to:
+   - 0.1 = More lenient (fewer detected as out-of-context)
+   - 0.3 = Default (balanced)
+   - 0.5 = Stricter (more detected as out-of-context)
+
+
+2. APOLOGY MESSAGE (in knowledge_base.json):
+   
+   Change the message in:
+   "messages": {
+       "out_of_context_apology": "YOUR CUSTOM MESSAGE HERE"
+   }
+
+
+3. ADD CUSTOM KEYWORDS (in modules/out_of_context_detector.py):
+   
+   self.admission_keywords = {
+       'existing...',
+       'your_new_keyword'  # Add here
+   }
+   
+   self.out_of_context_keywords = {
+       'existing...',
+       'your_new_keyword'  # Add here
+   }
+
+
+================================================================================
+SUMMARY OF TEST RESULTS
+================================================================================
+
+Test #          | Query Type       | Expected Method              | Result | Notes
+---------------+------------------+------------------------------+--------+------
+1               | In-Context       | rule_based/intent/nlp/ens    | PASS/FAIL
+2               | Out-of-Context   | out_of_context_detection     | PASS/FAIL
+3               | Weather          | out_of_context_detection     | PASS/FAIL
+4               | Programming      | out_of_context_detection     | PASS/FAIL
+5               | Program Inquiry  | NOT out-of-context           | PASS/FAIL
+6               | Campus Life      | NOT out-of-context           | PASS/FAIL
+7               | Tuition          | NOT out-of-context           | PASS/FAIL
+8               | Sports           | Depends on Config            | PASS/FAIL
+
+Record your results above to track test coverage.
+
+
+================================================================================
+PERFORMANCE NOTES
+================================================================================
+
+- Out-of-context detection is FAST (~2-5ms per query)
+- It runs BEFORE the three response methods
+- Out-of-context queries skip all three methods (saves processing time)
+- No external API calls or network latency
+- Logging is enabled for all detections
+
+When testing, you should notice out-of-context queries respond faster than
+normal admission queries (because they skip processing).
+
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Problem: Out-of-context query was not detected as out-of-context
+Solution:
+  1. Check if the query contains admission keywords
+  2. If yes, increase sensitivity (lower threshold to 0.1)
+  3. Check if keywords need to be added to the lists
+  4. Review the out_of_context_reason in response
+
+Problem: In-context query was incorrectly detected as out-of-context
+Solution:
+  1. Check the out_of_context_reason field
+  2. Add the missing admission keyword to the list
+  3. Lower sensitivity (increase threshold to 0.5)
+
+Problem: Apology message not appearing
+Solution:
+  1. Check that out-of-context_apology message is in knowledge_base.json
+  2. Restart the chatbot application
+  3. Check logs for errors in modules/out_of_context_detector.py
+
+Problem: Response method shows something other than expected
+Solution:
+  1. Check is_out_of_context flag (true/false)
+  2. Check out_of_context_reason for explanation
+  3. Review configuration settings
+
+
+================================================================================
+END OF TESTING GUIDE
+================================================================================

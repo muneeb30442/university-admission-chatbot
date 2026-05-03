@@ -1,0 +1,41 @@
+ID,Category,Question,Expected_Intent,Difficulty,Description
+1,Application Process,What is the application deadline?,application_deadline,Simple,Basic direct question about deadline
+2,Application Process,By when do I need to apply?,application_deadline,Simple,Paraphrased deadline question
+3,Application Process,I need to know the submission deadline - can you help?,application_deadline,Moderate,Conversational deadline question
+4,Admission Requirements,What are the eligibility requirements?,eligibility_requirements,Simple,Direct question about requirements
+5,Admission Requirements,Am I eligible to apply if I have a 3.2 GPA?,eligibility_requirements,Moderate,Specific eligibility question with GPA
+6,Admission Requirements,What's the minimum GPA and SAT score needed to get in?,eligibility_requirements,Moderate,Multi-part eligibility question
+7,Admission Requirements,Can I apply if I don't have perfect test scores?,eligibility_requirements,Complex,Conditional/hypothetical eligibility question
+8,Application Process,What documents do I need to submit?,required_documents,Simple,Basic question about documents
+9,Application Process,Which files and certificates should I include in my application?,required_documents,Moderate,Paraphrased documents question
+10,Application Process,Is a recommendation letter required?,required_documents,Simple,Specific document type question
+11,Tuition & Financial Aid,What is the application fee?,application_fee,Simple,Direct fee question
+12,Tuition & Financial Aid,Do you charge for applications? How much?,application_fee,Simple,Multi-part fee question
+13,Tuition & Financial Aid,Are there fee waivers available for underprivileged students?,application_fee,Moderate,Fee waiver eligibility question
+14,Tuition & Financial Aid,What is the tuition cost per semester?,tuition_costs,Simple,Direct tuition question
+15,Tuition & Financial Aid,How much will my degree cost in total?,tuition_costs,Moderate,Total cost calculation question
+16,Tuition & Financial Aid,What financial aid options are available?,financial_aid,Simple,General financial aid question
+17,Tuition & Financial Aid,Do you have scholarships or grants for merit students?,financial_aid,Moderate,Specific aid type question
+18,Tuition & Financial Aid,Can I get financial assistance if my family has low income?,financial_aid,Moderate,Need-based aid question
+19,Programs & Courses,What majors and programs do you offer?,course_programs,Simple,Basic programs question
+20,Programs & Courses,Can I study engineering or computer science?,course_programs,Simple,Specific program inquiry
+21,Programs & Courses,What specializations are available within your business program?,course_programs,Moderate,Program specialization question
+22,Programs & Courses,How long does it take to complete a degree program?,program_duration,Simple,Program duration question
+23,Programs & Courses,Is your program a 3-year or 4-year program?,program_duration,Simple,Specific duration question
+24,Campus Life & Facilities,What is the campus like? Tell me about student life.,campus_facilities,Moderate,General campus information
+25,Campus Life & Facilities,Do you have on-campus housing and dining facilities?,campus_facilities,Simple,Specific facility question
+26,Campus Life & Facilities,What clubs and student organizations are available?,campus_facilities,Moderate,Student activity question
+27,Application Process,How long does it take to hear back from admissions?,admission_timeline,Simple,Decision timeline question
+28,Application Process,When should I expect to receive my admission decision?,admission_timeline,Moderate,Paraphrased timeline question
+29,Special Cases,Can I transfer from another university to yours?,transfer_admission,Simple,Transfer eligibility question
+30,Special Cases,What are the requirements for transferring as an international student?,transfer_admission,Complex,Complex transfer question with multiple criteria
+31,Special Cases,Can international students apply?,international_students,Simple,International eligibility question
+32,Special Cases,What English proficiency test scores do you require for international applicants?,international_students,Moderate,International student requirements
+33,Support & Contact,How can I contact the admissions office?,contact_info,Simple,Contact information request
+34,Support & Contact,What is the phone number and email for admissions?,contact_info,Simple,Specific contact details
+35,Greetings,Hello!,greeting,Simple,Simple greeting
+36,Greetings,Hi - I have some questions about your university,greeting,Simple,Greeting with intent
+37,Greetings,Good morning! Can you help me with admission information?,greeting,Simple,Formal greeting
+38,Greetings,Thanks for your help - goodbye!,goodbye,Simple,Farewell with gratitude
+39,Application Process,I'm confused about the application process - can you explain it step by step?,application_process,Complex,Detailed process explanation request
+40,Tuition & Financial Aid,Do you have any information about scholarships for minorities or women?,financial_aid,Complex,Specific demographic scholarship inquiry

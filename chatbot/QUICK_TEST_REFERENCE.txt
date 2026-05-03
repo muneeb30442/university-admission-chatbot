@@ -1,0 +1,236 @@
+================================================================================
+                 UNIVERSITY ADMISSION CHATBOT
+                    40 TEST QUESTIONS QUICK REFERENCE
+================================================================================
+
+Copy & Paste these questions directly into the chatbot to test all three methods!
+
+================================================================================
+GROUP 1: APPLICATION PROCESS (9 Questions)
+================================================================================
+
+[SIMPLE - Direct Matching]
+1. What is the application deadline?
+2. By when do I need to apply?
+3. What documents do I need to submit?
+4. Is a recommendation letter required?
+5. How long does it take to hear back from admissions?
+
+[MODERATE - Paraphrasing]
+6. I need to know the submission deadline - can you help?
+7. Which files and certificates should I include in my application?
+8. When should I expect to receive my admission decision?
+
+[COMPLEX - Multi-part/Contextual]
+9. I'm confused about the application process, can you explain it step by step?
+
+================================================================================
+GROUP 2: ADMISSION REQUIREMENTS (4 Questions)
+================================================================================
+
+[SIMPLE - Direct Questions]
+1. What are the eligibility requirements?
+2. What's the minimum GPA required?
+3. What SAT score do I need?
+
+[MODERATE - Specific Context]
+4. Am I eligible to apply if I have a 3.2 GPA?
+
+[COMPLEX - Multiple Criteria]
+5. What's the minimum GPA and SAT score needed to get in?
+6. Can I apply if I don't have perfect test scores?
+
+================================================================================
+GROUP 3: TUITION & FINANCIAL AID (8 Questions)
+================================================================================
+
+[SIMPLE - Direct Questions]
+1. What is the application fee?
+2. Do you charge for applications? How much?
+3. What is the tuition cost per semester?
+4. What financial aid options are available?
+5. Do you have on-campus housing and dining facilities?
+
+[MODERATE - Specific Scenarios]
+6. Are there fee waivers available for underprivileged students?
+7. How much will my degree cost in total?
+8. Do you have scholarships or grants for merit students?
+
+[COMPLEX - Special Circumstances]
+9. Can I get financial assistance if my family has low income?
+10. Do you have any information about scholarships for minorities or women?
+
+================================================================================
+GROUP 4: PROGRAMS & COURSES (5 Questions)
+================================================================================
+
+[SIMPLE - Direct Questions]
+1. What majors and programs do you offer?
+2. Can I study engineering or computer science?
+3. Is your program a 3-year or 4-year program?
+
+[MODERATE - Specific Inquiry]
+4. What specializations are available within your business program?
+5. How long does it take to complete a degree program?
+
+================================================================================
+GROUP 5: CAMPUS LIFE & FACILITIES (3 Questions)
+================================================================================
+
+[MODERATE - General Information]
+1. What is the campus like? Tell me about student life.
+2. What clubs and student organizations are available?
+
+[SIMPLE - Specific Facility]
+3. Do you have on-campus housing?
+
+================================================================================
+GROUP 6: SPECIAL CASES (4 Questions)
+================================================================================
+
+[SIMPLE - Direct Questions]
+1. Can international students apply?
+2. Can I transfer from another university to yours?
+
+[MODERATE - Specific Criteria]
+3. What English proficiency test scores do you require for international applicants?
+
+[COMPLEX - Combined Requirements]
+4. What are the requirements for transferring as an international student?
+
+================================================================================
+GROUP 7: SUPPORT & CONTACT (2 Questions)
+================================================================================
+
+[SIMPLE - Direct Questions]
+1. How can I contact the admissions office?
+2. What is the phone number and email for admissions?
+
+================================================================================
+GROUP 8: GREETINGS (4 Questions)
+================================================================================
+
+[SIMPLE - Social Interaction]
+1. Hello!
+2. Hi, I have some questions about your university
+3. Good morning! Can you help me with admission information?
+4. Thanks for your help, goodbye!
+
+================================================================================
+TESTING STATISTICS
+================================================================================
+
+Total Questions:     40
+Simple Questions:    17
+Moderate Questions:  17
+Complex Questions:    6
+
+By Category:
+- Application Process:      9 questions
+- Admission Requirements:    4 questions
+- Tuition & Financial Aid:   8 questions
+- Programs & Courses:        5 questions
+- Campus Life:               3 questions
+- Special Cases:             4 questions
+- Support/Contact:           2 questions
+- Greetings:                 4 questions
+
+================================================================================
+HOW TO TEST
+================================================================================
+
+AUTOMATED TEST (All 40 questions):
+  $ cd chatbot
+  $ python test_chatbot.py
+  
+  This generates:
+  - Accuracy metrics for each method
+  - Response time comparison
+  - Test report with detailed results
+  - Logs saved to logs/test_results_*.json
+
+MANUAL TEST (Interactive):
+  $ python app.py
+  Visit: http://localhost:5000
+  
+  Steps:
+  1. Select response method from dropdown
+  2. Copy & paste a question from above
+  3. Review response quality
+  4. Check confidence score
+  5. View statistics in sidebar
+
+PERFORMANCE BENCHMARKS:
+  Rule-Based:        1-2ms   (Best for simple, keyword-based)
+  Intent Classifier: 5-10ms  (Best for intent variations)
+  NLP Similarity:    10-20ms (Best for semantic understanding)
+  Ensemble:          25-40ms (Best overall accuracy - RECOMMENDED)
+
+================================================================================
+EXPECTED ACCURACY BY METHOD
+================================================================================
+
+Rule-Based:        65-75%  | Fast, keyword-matching
+Intent Classifier: 75-85%  | Smart, ML-powered
+NLP Similarity:    70-80%  | Semantic understanding
+Ensemble:          80-90%  | Best for production
+
+================================================================================
+SAMPLE TESTING WORKFLOW
+================================================================================
+
+1. START WITH SIMPLE QUESTIONS (Group 1-3, Simple):
+   - Verify basic functionality
+   - Check knowledge base coverage
+   - Confirm all methods respond
+
+2. TEST MODERATE QUESTIONS (Groups 1-6, Moderate):
+   - Verify semantic understanding
+   - Check paraphrase handling
+   - Assess intent classification
+
+3. CHALLENGE WITH COMPLEX QUESTIONS (Groups 1,2,6, Complex):
+   - Evaluate multi-part handling
+   - Check edge cases
+   - Assess fallback responses
+
+4. REVIEW STATISTICS:
+   - Check logs/test_results_*.json
+   - Review response times
+   - Identify weak areas
+
+5. IMPROVE & RE-TEST:
+   - Add missing Q&A pairs to knowledge_base.json
+   - Enhance intents in intents.json
+   - Re-run test suite
+
+================================================================================
+QUICK DEBUG CHECKLIST
+================================================================================
+
+[ ] All 40 questions have responses
+[ ] Simple questions get correct answers
+[ ] Moderate questions are paraphrased correctly
+[ ] Complex questions trigger appropriate fallbacks
+[ ] Response times are acceptable (<100ms total)
+[ ] Confidence scores are reasonable (0.5-0.95)
+[ ] No HTML errors in responses
+[ ] Logs are being generated correctly
+[ ] All three methods produce valid responses
+[ ] Ensemble method shows highest accuracy
+
+================================================================================
+NEXT STEPS
+================================================================================
+
+1. Run automated tests: python test_chatbot.py
+2. Review test results in logs/
+3. Identify improvement areas
+4. Update knowledge_base.json with missing info
+5. Enhance intents.json with more patterns
+6. Re-run tests to verify improvements
+7. Deploy when satisfied with accuracy
+
+See TESTING_GUIDE.md for detailed information and expected results!
+
+================================================================================

@@ -11,6 +11,7 @@ from typing import Dict, List, Tuple, Optional
 from modules.rule_based import RuleBasedMatcher
 from modules.intent_classifier import IntentClassifier
 from modules.nlp_similarity import NLPSimilarityMatcher
+from modules.out_of_context_detector import OutOfContextDetector
 
 
 class UniversityAdmissionChatbot:
@@ -35,6 +36,9 @@ class UniversityAdmissionChatbot:
         self.rule_based = RuleBasedMatcher(intents_path, knowledge_base_path)
         self.intent_classifier = IntentClassifier(intents_path, knowledge_base_path)
         self.nlp_similarity = NLPSimilarityMatcher(intents_path, knowledge_base_path)
+        
+        # Initialize out-of-context detector
+        self.out_of_context_detector = OutOfContextDetector(knowledge_base_path)
         
         # Setup logging
         self.logger = self._setup_logging()
@@ -88,8 +92,25 @@ class UniversityAdmissionChatbot:
             'user_input': user_input,
             'method': method,
             'timestamp': datetime.now().isoformat(),
-            'responses': {}
+            'responses': {},
+            'is_out_of_context': False,
+            'out_of_context_reason': None
         }
+        
+        # Check if query is out of context
+        is_out_of_context, reason = self.out_of_context_detector.is_out_of_context(user_input)
+        
+        if is_out_of_context:
+            result['is_out_of_context'] = True
+            result['out_of_context_reason'] = reason
+            result['final_response'] = self.out_of_context_detector.get_apology_message()
+            result['confidence'] = 1.0
+            result['method'] = 'out_of_context_detection'
+            
+            # Log the out-of-context response
+            self.logger.info(f"Out-of-Context Query Detected (Reason: {reason}). Apology Message Sent.")
+            
+            return result
         
         if method == "rule_based":
             result['responses']['rule_based'] = self._get_rule_based_response(user_input)
